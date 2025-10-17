@@ -119,13 +119,13 @@ export class BookingAServiceComponent {
     });
   }
 
-  convertTermsToString (termsDates: Date[]): void {
-    this.freeTerms = [];
-    termsDates.forEach((date) => {
-      let dateString = date.toString().slice(11, 16);
-      this.freeTerms.push(dateString);
-    });
+  convertTermsToString(termsDates: Date[]): void {
+    this.freeTerms = termsDates.map(date =>
+      date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false })
+    );
+
   }
+
 
 
   book() {
