@@ -108,10 +108,4 @@ describe('BookingAServiceComponent', () => {
     });
 
 
-
-
-
-
-
-
 });
